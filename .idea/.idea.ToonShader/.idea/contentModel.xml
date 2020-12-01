@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\XiuMing\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\XiuMing\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ToonShader.-1837989680.00" t="ExcludeRecursive" />
+    <e p="D:\Study\Github\ToonShader" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="PlugTangentTools.cs" t="Include" />
+        </e>
+        <e p="Shader" t="Include">
+          <e p="OutLine.shader" t="Include" />
+        </e>
+        <e p="Suriyun" t="Include">
+          <e p="readme.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="AnimatorController.cs" t="Include" />
+            <e p="Swapper.cs" t="Include" />
+          </e>
+          <e p="UnityChanShader" t="Include">
+            <e p="Shader" t="Include">
+              <e p="CharaMain.cginc" t="Include" />
+              <e p="CharaOutline.cginc" t="Include" />
+              <e p="CharaSkin.cginc" t="Include" />
+              <e p="readme.txt" t="Include" />
+              <e p="Unitychan_chara_akarami_blend.shader" t="Include" />
+              <e p="Unitychan_chara_eye.shader" t="Include" />
+              <e p="Unitychan_chara_eye_blend.shader" t="Include" />
+              <e p="Unitychan_chara_eyelash_blend.shader" t="Include" />
+              <e p="Unitychan_chara_fuku.shader" t="Include" />
+              <e p="Unitychan_chara_fuku_ds.shader" t="Include" />
+              <e p="Unitychan_chara_hada.shader" t="Include" />
+              <e p="Unitychan_chara_hada_blend.shader" t="Include" />
+              <e p="Unitychan_chara_hair.shader" t="Include" />
+              <e p="Unitychan_chara_hair_ds.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="ToonShader.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
