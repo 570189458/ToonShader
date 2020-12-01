@@ -63,6 +63,7 @@
             struct v2f
             {
                 float4 pos : SV_POSITION;
+                float3 vertColor : COLOR;
             };
 
             v2f vert(a2v v)
@@ -78,14 +79,15 @@
                 // 求屏幕宽高比
                 float aspect = abs(nearUpperRight.y / nearUpperRight.x);
                 ndcNormal.x *= aspect;
-                pos.xy += 0.01 * _OutlineWidth * ndcNormal.xy;
+                pos.xy += 0.01 * _OutlineWidth * ndcNormal.xy * v.vertColor.a;
                 o.pos = pos;
+                o.vertColor = v.vertColor.rgb;
                 return o;
             }
 
-            half4 frag(v2f i) : SV_TARGET
+            fixed4 frag(v2f i) : SV_TARGET
             {
-                return _OutlineColor;
+                return fixed4(_OutlineColor * i.vertColor, 0);
             }
 
             ENDCG
