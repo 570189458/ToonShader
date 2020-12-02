@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Naoko_Maid
-  m_Shader: {fileID: 4800000, guid: 06904b352da9f4143984441f07df59fc, type: 3}
+  m_Shader: {fileID: 4800000, guid: 71fa13f57e17d104d815845a26e1f03f, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -19,90 +19,23 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EnvMapSampler:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FalloffSampler:
-        m_Texture: {fileID: 2800000, guid: 36249473fe1adf442ab986148d327186, type: 3}
+    - _IlmTex:
+        m_Texture: {fileID: 2800000, guid: 5ef9bcb6671d21241aa0ecd6c5ad18a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 5ef9bcb6671d21241aa0ecd6c5ad18a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalMapSampler:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _RimLightSampler:
-        m_Texture: {fileID: 2800000, guid: 36249473fe1adf442ab986148d327186, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecularReflectionSampler:
-        m_Texture: {fileID: 2800000, guid: 3efba7c112fa27d4baa50f68135d225f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DepthBias: 0.00012
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EdgeThickness: 6
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
     - _OutLineWidth: 0.5
-    - _OutlineWidth: 1
-    - _Parallax: 0.02
-    - _ShadowRange: 0.117
+    - _ShadowRange: 0.6
     - _ShadowSmooth: 0
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SpecularPower: 20
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
+    - _SpecularGloss: 6
+    - _SpecularMulti: 0.044
+    - _SpecularRange: 0.775
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutLineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+    - _ShadowColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+    - _SpecularColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
