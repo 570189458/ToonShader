@@ -11,6 +11,7 @@
         </e>
         <e p="Shader" t="Include">
           <e p="CelRender.shader" t="Include" />
+          <e p="CelRenderFull.shader" t="Include" />
           <e p="OutLine.shader" t="Include" />
         </e>
         <e p="Suriyun" t="Include">
