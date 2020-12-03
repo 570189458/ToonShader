@@ -13,6 +13,8 @@
         _RimMax("Rim Max", Range(0, 1)) = 1
         _RimMin("Rim Min", Range(0, 1)) = 0
         _RimSmooth("Rim Smooth", Range(0, 1)) = 0.2
+        _RimBloomExp("Rim BloomExp", Range(0, 1)) = 0
+        _RimBloomMulti("Rim BloomMulyi", Range(0, 1)) = 0
 
         [Space(10)]
         _OutLineWidth("OutLine Width", Range(0.01, 2)) = 0.24
@@ -47,6 +49,8 @@
             half _RimMin;
             half _RimMax;
             half _RimSmooth;
+            half _RimBloomExp;
+            half _RimBloomMulti;
 
             struct a2v
             {
@@ -91,7 +95,10 @@
                 half rim = smoothstep(_RimMin, _RimMax, f);
                 rim = smoothstep(0, _RimSmooth, rim);
                 half3 rimColor = rim * _RimColor.rgb * _RimColor.a;
+                half Ndotl = max(0, dot(worldNormal, worldLightDir));
+                half rimBloom = pow(f, _RimBloomExp) * _RimBloomMulti * Ndotl;
                 col.rgb = _LightColor0 * (diffuse + rimColor);
+                col.a = rimBloom;
                 return col;
             }
 

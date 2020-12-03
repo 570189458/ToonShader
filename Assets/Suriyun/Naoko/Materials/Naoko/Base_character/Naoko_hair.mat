@@ -95,6 +95,8 @@ Material:
     - _OutLineWidth: 0.5
     - _OutlineWidth: 1
     - _Parallax: 0.02
+    - _RimBloomExp: 0.332
+    - _RimBloomMulti: 1
     - _RimMax: 0.848
     - _RimMin: 0.627
     - _RimSmooth: 0.758
