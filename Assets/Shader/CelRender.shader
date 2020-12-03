@@ -9,9 +9,16 @@
         _ShadowSmooth("Shadow Smooth", Range(0, 1)) = 0.2
 
         [Space(10)]
+        _RimColor("Rim Color", Color) = (0, 0, 0, 1)
+        _RimMax("Rim Max", Range(0, 1)) = 1
+        _RimMin("Rim Min", Range(0, 1)) = 0
+        _RimSmooth("Rim Smooth", Range(0, 1)) = 0.2
+
+        [Space(10)]
         _OutLineWidth("OutLine Width", Range(0.01, 2)) = 0.24
         _OutLineColor("OutLine Color", Color) = (0.5, 0.5, 0.5, 1)
     }
+
     SubShader
     {
         Tags { "RenderType"="Opaque" }
@@ -36,6 +43,10 @@
             half3 _ShadowColor;
             half _ShadowRange;
             half _ShadowSmooth;
+            half4 _RimColor;
+            half _RimMin;
+            half _RimMax;
+            half _RimSmooth;
 
             struct a2v
             {
@@ -75,7 +86,12 @@
                 // half ramp = tex2D(_rampTex, float2(saturate(halfLambert - _ShadowRange), 0.5)).r;
                 half3 diffuse = lerp(_ShadowColor, _MainColor, ramp);
                 diffuse *= mainTex;
-                col.rgb = _LightColor0 * diffuse;
+
+                half f = 1.0 - saturate(dot(viewDir, worldNormal));
+                half rim = smoothstep(_RimMin, _RimMax, f);
+                rim = smoothstep(0, _RimSmooth, rim);
+                half3 rimColor = rim * _RimColor.rgb * _RimColor.a;
+                col.rgb = _LightColor0 * (diffuse + rimColor);
                 return col;
             }
 

@@ -5,11 +5,13 @@
 		_MainTex ("MainTex", 2D) = "white" {}
         _IlmTex ("IlmTex", 2D) = "white" {}
 
+
 		[Space(20)]
 		_MainColor("Main Color", Color) = (1,1,1)
 		_ShadowColor ("Shadow Color", Color) = (0.7, 0.7, 0.7)
 		_ShadowSmooth("Shadow Smooth", Range(0, 0.03)) = 0.002
 		_ShadowRange ("Shadow Range", Range(0, 1)) = 0.6
+		_RimColor("Rim Color", Color) = (1, 1, 1)
 
 		[Space(20)]
 		_SpecularColor("Specular Color", Color) = (1,1,1)
@@ -50,6 +52,7 @@
 			half _SpecularRange;
         	half _SpecularMulti;
 			half _SpecularGloss;
+			half4 _RimColor;
 
 			struct a2v
 			{
@@ -65,6 +68,7 @@
 				float3 worldNormal : TEXCOORD1;
 				float3 worldPos : TEXCOORD2;
 			};
+
 			v2f vert (a2v v)
 			{
 				v2f o = (v2f)0;
@@ -102,7 +106,10 @@
 					specular = _SpecularMulti * (ilmTex.r) * _SpecularColor;
 				}
 
-				col.rgb = (diffuse + specular) * _LightColor0.rgb;
+				half f = 1.0 - saturate(dot(viewDir, worldNormal));
+				half3 rimColor = f * _RimColor.rgb * _RimColor.a;
+
+				col.rgb = (diffuse + specular + rimColor) * _LightColor0.rgb;
 				return col;
 			}
 			ENDCG
